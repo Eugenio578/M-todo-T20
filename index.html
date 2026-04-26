@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treino Rápido 20 - Apenas 20 Minutos por Dia em Casa</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        .hero-bg {
+            background:
+                linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)),
+                url('https://via.placeholder.com/1920x1080/111827/f97316?text=Treino+R%C3%A1pido+20');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .accent {
+            color: #f97316;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            transition: all 0.25s ease;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(249, 115, 22, 0.5);
+        }
+
+        .highlight {
+            background: #84cc16;
+            color: #111827;
+        }
+
+        /* ACCORDION (corrigido e sem duplicação) */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-header.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body class="bg-zinc-950 text-zinc-100">
+
+<section class="hero-bg min-h-screen flex items-center py-16">
+
+    <div class="w-full max-w-5xl mx-auto px-5 text-center">
+
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur px-4 py-2 rounded-full mb-6 text-xs sm:text-sm font-medium">
+            <i class="fas fa-bolt text-orange-400"></i>
+            ACESSO IMEDIATO • SEM ACADEMIA
+        </div>
+
+        <!-- Headline -->
+        <h1 class="text-3xl sm:text-4xl md:text-6xl font-black leading-snug mb-6">
+            Transforme seu corpo com apenas<br class="hidden sm:block">
+            <span class="accent">20 minutos por dia</span>
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="text-base sm:text-lg md:text-2xl text-zinc-300 max-w-2xl mx-auto mb-10">
+            Um método simples para quem quer sair do zero, treinar em casa e finalmente ter consistência.
+        </p>
+
+        <!-- CTA -->
+        <a href="#preco"
+           class="btn-primary inline-flex items-center justify-center gap-3 w-full sm:w-auto text-white font-bold text-lg sm:text-xl md:text-2xl px-8 py-4 sm:px-10 sm:py-5 rounded-xl shadow-xl">
+            COMEÇAR AGORA POR R$ 17
+            <i class="fas fa-arrow-right"></i>
+        </a>
+
+        <!-- Prova rápida -->
+        <div class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8 mt-10 text-xs sm:text-sm text-zinc-400">
+
+            <div class="flex items-center justify-center gap-2">
+                <i class="fas fa-check text-green-400"></i>
+                Plano de 30 dias
+            </div>
+
+            <div class="flex items-center justify-center gap-2">
+                <i class="fas fa-check text-green-400"></i>
+                Sem equipamentos
+            </div>
+
+            <div class="flex items-center justify-center gap-2">
+                <i class="fas fa-check text-green-400"></i>
+                Para iniciantes
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="py-16 md:py-20 bg-zinc-900">
+
+    <div class="max-w-5xl mx-auto px-5 text-center">
+
+        <!-- Headline -->
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 leading-snug">
+            Você começa motivado… mas acaba desistindo poucos dias depois?
+        </h2>
+
+        <!-- Subheadline -->
+        <p class="text-sm sm:text-base md:text-lg text-zinc-400 max-w-2xl mx-auto mb-10">
+            Falta de tempo, falta de consistência e métodos complicados fazem você travar — mesmo querendo mudar.
+        </p>
+
+        <!-- Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-left">
+
+            <!-- Item -->
+            <div class="bg-zinc-800 p-6 rounded-2xl">
+                <i class="fas fa-clock text-3xl text-orange-500 mb-3"></i>
+                <p class="font-semibold text-sm sm:text-base mb-1">
+                    Sem tempo
+                </p>
+                <p class="text-zinc-400 text-sm">
+                    Sua rotina é corrida e você não consegue encaixar treinos longos.
+                </p>
+            </div>
+
+            <!-- Item -->
+            <div class="bg-zinc-800 p-6 rounded-2xl">
+                <i class="fas fa-dumbbell text-3xl text-orange-500 mb-3"></i>
+                <p class="font-semibold text-sm sm:text-base mb-1">
+                    Sem estrutura
+                </p>
+                <p class="text-zinc-400 text-sm">
+                    Academia, equipamentos ou espaço acabam virando desculpa.
+                </p>
+            </div>
+
+            <!-- Item -->
+            <div class="bg-zinc-800 p-6 rounded-2xl">
+                <i class="fas fa-heart-crack text-3xl text-orange-500 mb-3"></i>
+                <p class="font-semibold text-sm sm:text-base mb-1">
+                    Falta de consistência
+                </p>
+                <p class="text-zinc-400 text-sm">
+                    Você começa bem, mas perde o ritmo e desiste rápido.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Quebra de padrão (importante) -->
+        <p class="mt-12 text-base sm:text-lg text-zinc-300 max-w-2xl mx-auto">
+            E não… o problema não é você.
+        </p>
+
+        <p class="mt-4 text-base sm:text-lg text-orange-400 font-medium max-w-2xl mx-auto">
+            O problema é que te ensinaram do jeito errado.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="py-20 md:py-24 bg-zinc-950">
+
+    <div class="max-w-6xl mx-auto px-5">
+
+        <!-- Headline -->
+        <div class="text-center mb-14">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-black mb-6 leading-snug">
+                Resultados reais com apenas <span class="text-orange-500">20 minutos por dia</span>
+            </h2>
+
+            <p class="text-base sm:text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto">
+                Sem complicação. Sem precisar pensar. Apenas seguir e evoluir.
+            </p>
+        </div>
+
+        <!-- Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- CARD -->
+            <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 hover:border-orange-500/40 transition">
+                <div class="text-3xl mb-4">⏱️</div>
+                <h3 class="text-lg sm:text-xl font-bold mb-2">
+                    Treinos rápidos e eficientes
+                </h3>
+                <p class="text-zinc-400 text-sm sm:text-base">
+                    Apenas 20 minutos por dia que cabem em qualquer rotina, até nas mais corridas.
+                </p>
+            </div>
+
+            <!-- CARD -->
+            <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 hover:border-orange-500/40 transition">
+                <div class="text-3xl mb-4">🏠</div>
+                <h3 class="text-lg sm:text-xl font-bold mb-2">
+                    Treine em casa
+                </h3>
+                <p class="text-zinc-400 text-sm sm:text-base">
+                    Sem academia, sem equipamentos e sem depender de ninguém.
+                </p>
+            </div>
+
+            <!-- CARD -->
+            <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 hover:border-orange-500/40 transition">
+                <div class="text-3xl mb-4">📈</div>
+                <h3 class="text-lg sm:text-xl font-bold mb-2">
+                    Evolução visível
+                </h3>
+                <p class="text-zinc-400 text-sm sm:text-base">
+                    Mais energia, mais disposição e mudanças no corpo em poucas semanas.
+                </p>
+            </div>
+
+            <!-- CARD -->
+            <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 hover:border-orange-500/40 transition">
+                <div class="text-3xl mb-4">🧠</div>
+                <h3 class="text-lg sm:text-xl font-bold mb-2">
+                    Explicação simples
+                </h3>
+                <p class="text-zinc-400 text-sm sm:text-base">
+                    Você aprende exatamente como fazer cada exercício sem confusão.
+                </p>
+            </div>
+
+            <!-- CARD -->
+            <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 hover:border-orange-500/40 transition">
+                <div class="text-3xl mb-4">📅</div>
+                <h3 class="text-lg sm:text-xl font-bold mb-2">
+                    Plano pronto de 30 dias
+                </h3>
+                <p class="text-zinc-400 text-sm sm:text-base">
+                    Você só segue o plano — sem precisar pensar no que fazer.
+                </p>
+            </div>
+
+            <!-- CARD -->
+            <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 hover:border-orange-500/40 transition">
+                <div class="text-3xl mb-4">🛡️</div>
+                <h3 class="text-lg sm:text-xl font-bold mb-2">
+                    Seguro para iniciantes
+                </h3>
+                <p class="text-zinc-400 text-sm sm:text-base">
+                    Adaptado para quem está começando ou está acima do peso.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Fechamento -->
+        <div class="text-center mt-14">
+            <p class="text-base sm:text-lg md:text-xl text-zinc-300 max-w-2xl mx-auto">
+                Esse não é só um treino — é um método simples que te tira do zero e te leva até resultados reais.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="preco" class="py-16 md:py-20 bg-black border-t border-orange-500/20">
+
+    <div class="max-w-4xl mx-auto px-5 text-center">
+
+        <!-- Headline -->
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 leading-snug">
+            Comece hoje por menos que um lanche
+        </h2>
+
+        <p class="text-zinc-400 mb-10 text-sm sm:text-base">
+            Acesso imediato • Sem mensalidade • Pague uma vez só
+        </p>
+
+        <!-- Card -->
+        <div class="bg-zinc-900 rounded-2xl p-8 max-w-md mx-auto border border-orange-500/20 shadow-xl">
+
+            <!-- Preço antigo -->
+            <p class="text-zinc-500 line-through text-base mb-2">
+                De R$ 97
+            </p>
+
+            <!-- Preço atual -->
+            <h3 class="text-4xl sm:text-5xl font-black text-orange-500 mb-2">
+                R$ 17
+            </h3>
+
+            <p class="text-zinc-400 mb-6 text-sm">
+                ou 2x de R$ 9,50
+            </p>
+
+            <!-- Benefícios -->
+            <ul class="text-left space-y-3 mb-8 text-zinc-300 text-sm">
+                <li>✔ Plano completo de 30 dias</li>
+                <li>✔ Treinos rápidos de 20 minutos</li>
+                <li>✔ Sem equipamentos</li>
+                <li>✔ Acesso imediato</li>
+            </ul>
+
+            <!-- CTA -->
+            <a href="https://SEU-LINK-DE-PAGAMENTO"
+               class="btn-primary block w-full py-4 text-lg font-bold rounded-xl text-center">
+                QUERO COMEÇAR AGORA
+            </a>
+
+            <!-- Garantia -->
+            <p class="mt-4 text-green-400 text-xs">
+                ✔ 7 dias de garantia total — risco zero
+            </p>
+
+        </div>
+
+        <!-- Urgência -->
+        <p class="mt-8 text-orange-400 text-xs sm:text-sm">
+            ⚠️ Oferta de lançamento pode sair do ar a qualquer momento
+        </p>
+
+    </div>
+
+<div id="countdown" class="mt-6 text-center">
+
+    <p class="text-orange-400 text-sm mb-2">
+        ⚠️ Oferta expira em:
+    </p>
+
+    <div class="flex justify-center gap-3 text-white font-bold">
+
+        <div class="bg-zinc-900 px-3 py-2 rounded-lg">
+            <span id="hours">00</span>h
+        </div>
+
+        <div class="bg-zinc-900 px-3 py-2 rounded-lg">
+            <span id="minutes">00</span>m
+        </div>
+
+        <div class="bg-zinc-900 px-3 py-2 rounded-lg">
+            <span id="seconds">00</span>s
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- PROVA SOCIAL -->
+<section class="py-16 md:py-20 bg-zinc-950">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+
+        <h2 class="text-3xl md:text-4xl font-bold mb-12">
+            O que estão dizendo
+        </h2>
+
+        <div class="testimonial-carousel relative max-w-2xl mx-auto h-[380px] overflow-hidden rounded-3xl border border-zinc-800">
+
+            <div id="carouselInner" class="relative w-full h-full">
+
+                <!-- Depoimento 1 -->
+                <div class="testimonial-slide absolute inset-0 p-8 flex flex-col items-center justify-center text-center transition-all duration-500 opacity-100">
+
+                    <img src="https://i.pravatar.cc/100?img=5"
+                         class="w-20 h-20 rounded-full mb-4 border-4 border-orange-500">
+
+                    <p class="text-lg italic text-zinc-300 mb-4 max-w-md">
+                        “Achei que não ia conseguir manter rotina nenhuma, mas esses 20 minutos encaixaram perfeitamente. Já sinto diferença no corpo.”
+                    </p>
+
+                    <p class="font-semibold text-white">
+                        Carla, 32 anos
+                    </p>
+                </div>
+
+                <!-- Depoimento 2 -->
+                <div class="testimonial-slide absolute inset-0 p-8 flex flex-col items-center justify-center text-center transition-all duration-500 opacity-0">
+
+                    <img src="https://i.pravatar.cc/100?img=12"
+                         class="w-20 h-20 rounded-full mb-4 border-4 border-orange-500">
+
+                    <p class="text-lg italic text-zinc-300 mb-4 max-w-md">
+                        “Nunca gostei de academia, então isso aqui foi perfeito pra mim. Simples, rápido e funciona de verdade.”
+                    </p>
+
+                    <p class="font-semibold text-white">
+                        Bruno, 41 anos
+                    </p>
+                </div>
+
+                <!-- Depoimento 3 -->
+                <div class="testimonial-slide absolute inset-0 p-8 flex flex-col items-center justify-center text-center transition-all duration-500 opacity-0">
+
+                    <img src="https://i.pravatar.cc/100?img=25"
+                         class="w-20 h-20 rounded-full mb-4 border-4 border-orange-500">
+
+                    <p class="text-lg italic text-zinc-300 mb-4 max-w-md">
+                        “Comecei totalmente parado e consegui seguir sem desistir. Isso nunca tinha acontecido antes.”
+                    </p>
+
+                    <p class="font-semibold text-white">
+                        Mariana, 28 anos
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Botões -->
+            <button onclick="moveSlide(-1)"
+                class="absolute top-1/2 left-4 -translate-y-1/2 bg-orange-500 hover:bg-orange-600 text-white w-10 h-10 rounded-full flex items-center justify-center">
+                ←
+            </button>
+
+            <button onclick="moveSlide(1)"
+                class="absolute top-1/2 right-4 -translate-y-1/2 bg-orange-500 hover:bg-orange-600 text-white w-10 h-10 rounded-full flex items-center justify-center">
+                →
+            </button>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="py-16 md:py-20 bg-zinc-900">
+
+    <div class="max-w-3xl mx-auto px-5 text-center">
+
+        <div class="bg-zinc-800 border border-green-400/30 rounded-2xl p-8 md:p-10">
+
+            <!-- Ícone -->
+            <div class="text-green-400 text-5xl mb-6">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+
+            <!-- Título -->
+            <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
+                Teste por 7 dias sem risco
+            </h3>
+
+            <!-- Texto -->
+            <p class="text-sm sm:text-base md:text-lg text-zinc-300 mb-4">
+                Você pode acessar todo o conteúdo, começar os treinos e ver os resultados na prática.
+            </p>
+
+            <p class="text-sm sm:text-base md:text-lg text-zinc-300 mb-6">
+                Se por qualquer motivo você não gostar, basta pedir reembolso e devolvemos 100% do seu dinheiro.
+            </p>
+
+            <!-- Destaque -->
+            <div class="bg-green-400 text-black font-semibold px-5 py-3 rounded-xl inline-block text-sm sm:text-base">
+                Simples. Sem perguntas. Sem burocracia.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="py-16 md:py-20 bg-zinc-900">
+    <div class="max-w-3xl mx-auto px-5">
+
+        <!-- Título -->
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10">
+            Perguntas Frequentes
+        </h2>
+
+        <div class="space-y-3">
+
+            <!-- ITEM -->
+            <div class="bg-zinc-800 rounded-2xl border border-zinc-700 overflow-hidden">
+                <button class="accordion-header w-full px-5 py-4 text-left flex justify-between items-center">
+                    <span class="font-semibold text-sm sm:text-base">
+                        Preciso de equipamentos?
+                    </span>
+                    <i class="fas fa-chevron-down accordion-icon text-orange-400"></i>
+                </button>
+                <div class="accordion-content px-5 text-zinc-400 text-sm sm:text-base">
+                    <div class="pb-5">
+                        Não. Todos os exercícios usam apenas o peso do corpo. Você pode treinar em qualquer lugar.
+                    </div>
+                </div>
+            </div>
+
+            <!-- ITEM -->
+            <div class="bg-zinc-800 rounded-2xl border border-zinc-700 overflow-hidden">
+                <button class="accordion-header w-full px-5 py-4 text-left flex justify-between items-center">
+                    <span class="font-semibold text-sm sm:text-base">
+                        Serve para iniciantes?
+                    </span>
+                    <i class="fas fa-chevron-down accordion-icon text-orange-400"></i>
+                </button>
+                <div class="accordion-content px-5 text-zinc-400 text-sm sm:text-base">
+                    <div class="pb-5">
+                        Sim. Foi criado para quem está começando do zero, inclusive com adaptações para sobrepeso.
+                    </div>
+                </div>
+            </div>
+
+            <!-- ITEM -->
+            <div class="bg-zinc-800 rounded-2xl border border-zinc-700 overflow-hidden">
+                <button class="accordion-header w-full px-5 py-4 text-left flex justify-between items-center">
+                    <span class="font-semibold text-sm sm:text-base">
+                        Quanto tempo por dia?
+                    </span>
+                    <i class="fas fa-chevron-down accordion-icon text-orange-400"></i>
+                </button>
+                <div class="accordion-content px-5 text-zinc-400 text-sm sm:text-base">
+                    <div class="pb-5">
+                        Apenas 20 minutos por dia. Simples, rápido e eficiente.
+                    </div>
+                </div>
+            </div>
+
+            <!-- ITEM -->
+            <div class="bg-zinc-800 rounded-2xl border border-zinc-700 overflow-hidden">
+                <button class="accordion-header w-full px-5 py-4 text-left flex justify-between items-center">
+                    <span class="font-semibold text-sm sm:text-base">
+                        Funciona para quem está acima do peso?
+                    </span>
+                    <i class="fas fa-chevron-down accordion-icon text-orange-400"></i>
+                </button>
+                <div class="accordion-content px-5 text-zinc-400 text-sm sm:text-base">
+                    <div class="pb-5">
+                        Sim. Os exercícios são adaptados para proteger suas articulações e permitir evolução segura.
+                    </div>
+                </div>
+            </div>
+
+            <!-- ITEM -->
+            <div class="bg-zinc-800 rounded-2xl border border-zinc-700 overflow-hidden">
+                <button class="accordion-header w-full px-5 py-4 text-left flex justify-between items-center">
+                    <span class="font-semibold text-sm sm:text-base">
+                        Posso treinar todos os dias?
+                    </span>
+                    <i class="fas fa-chevron-down accordion-icon text-orange-400"></i>
+                </button>
+                <div class="accordion-content px-5 text-zinc-400 text-sm sm:text-base">
+                    <div class="pb-5">
+                        O ideal é treinar 3 a 4 vezes por semana, respeitando o descanso para melhores resultados.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="py-20 bg-zinc-950">
+
+    <div class="max-w-3xl mx-auto px-5 text-center">
+
+        <!-- Headline -->
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-black leading-snug mb-6">
+            Você só precisa de <span class="text-orange-500">20 minutos por dia</span>
+            para começar a mudar seu corpo
+        </h2>
+
+        <!-- Subheadline -->
+        <p class="text-base sm:text-lg md:text-xl text-zinc-400 mb-10 max-w-2xl mx-auto">
+            Sem academia. Sem equipamentos. Sem complicação.
+            Apenas um plano simples que funciona.
+        </p>
+
+        <!-- CTA -->
+        <a href="https://SEU-LINK-HOTMART"
+           class="btn-primary inline-flex items-center justify-center gap-3 w-full sm:w-auto text-white font-bold text-lg sm:text-xl px-10 py-4 rounded-xl shadow-xl">
+            QUERO COMEÇAR AGORA POR R$ 17
+            <i class="fas fa-arrow-right"></i>
+        </a>
+
+        <!-- Segurança -->
+        <p class="text-zinc-500 text-sm mt-6">
+            ✔ Acesso imediato • ✔ Garantia de 7 dias • ✔ Compra segura
+        </p>
+
+    </div>
+
+</section>
+
+<footer class="bg-black py-12 text-center text-zinc-500 text-sm">
+        <p>© 2026 Eugenio Machaei • Todos os direitos reservados</p>
+    </footer>
+
+<script>
+document.querySelectorAll('.accordion-header').forEach(button => {
+    button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+
+        // Fecha todos
+        document.querySelectorAll('.accordion-content').forEach(c => {
+            c.style.maxHeight = null;
+        });
+
+        document.querySelectorAll('.accordion-header').forEach(b => {
+            b.classList.remove('active');
+        });
+
+        // Abre o clicado
+        if (!content.style.maxHeight) {
+            content.style.maxHeight = content.scrollHeight + "px";
+            button.classList.add('active');
+        }
+    });
+});
+</script>
+
+<script>
+    // Define 72 horas a partir da primeira visita
+    let endTime = localStorage.getItem("promoEndTime");
+
+    if (!endTime) {
+        const now = new Date().getTime();
+        endTime = now + (72 * 60 * 60 * 1000); // 72h
+        localStorage.setItem("promoEndTime", endTime);
+    }
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = endTime - now;
+
+        if (distance <= 0) {
+            document.getElementById("countdown").innerHTML =
+                "<p class='text-red-500 font-bold'>Oferta encerrada</p>";
+            return;
+        }
+
+        const hours = Math.floor((distance / (1000 * 60 * 60)) % 72);
+        const minutes = Math.floor((distance / (1000 * 60)) % 60);
+        const seconds = Math.floor((distance / 1000) % 60);
+
+        document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+        document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+        document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+</script>
+
+<script>
+    const redirectURL = "oferta.html";
+
+    let exitTriggered = false;
+
+    // 🖥️ Detecta saída pelo mouse (desktop)
+    document.addEventListener("mouseout", function(e) {
+        if (!exitTriggered && e.clientY <= 0) {
+            exitTriggered = true;
+            window.location.href = redirectURL;
+        }
+    });
+
+    // 📱 Detecta botão voltar (mobile)
+    history.pushState(null, null, location.href);
+    window.onpopstate = function () {
+        window.location.href = redirectURL;
+    };
+</script>
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('.testimonial-slide');
+const totalSlides = slides.length;
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        if (i === index) {
+            slide.style.opacity = '1';
+            slide.style.transform = 'translateX(0)';
+            slide.style.zIndex = '1';
+        } else {
+            slide.style.opacity = '0';
+            slide.style.transform = 'translateX(20px)';
+            slide.style.zIndex = '0';
+        }
+    });
+}
+
+function moveSlide(direction) {
+    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+    showSlide(currentSlide);
+}
+
+// iniciar
+showSlide(currentSlide);
+
+// auto slide
+setInterval(() => moveSlide(1), 8000);
+</script>
+
+<!-- Botão WhatsApp Flutuante para Suporte -->
+<a href="https://wa.me/+258849005078?text=Oi%20Angela%2C%20tenho%20um%20problema%20no%20checkout%20do%20ebook%20Anti-Pessoas%20T%C3%B3xicas%20ou%20preciso%20de%20ajuda%20com%20algo"
+   target="_blank"
+   title="Problemas no checkout? Fale comigo agora!"
+   style="position: fixed; bottom: 25px; right: 25px; z-index: 9999; width: 70px; height: 70px; background: #25D366; border-radius: 50%; box-shadow: 0 8px 25px rgba(0,0,0,0.25); display: flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Suporte WhatsApp" style="width: 50px; height: 50px;">
+</a>
+
+<!-- Tooltip opcional ao passar o mouse -->
+<style>
+    a[href^="https://wa.me"]::after {
+        content: "Fale comigo no WhatsApp";
+        position: absolute;
+        bottom: 90px;
+        right: 0;
+        background: #111;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-size: 14px;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
+        pointer-events: none;
+    }
+    a[href^="https://wa.me"]:hover::after {
+        opacity: 1;
+        visibility: visible;
+        bottom: 85px;
+    }
+</style>
+
+</body>
+</html>
